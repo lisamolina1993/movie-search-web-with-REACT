@@ -61,8 +61,8 @@ a {
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+  width: 6.25rem;
+  height: 6.25rem;
   display: flex;
   align-items: center;
   filter: invert(1);
@@ -381,8 +381,8 @@ a {
     gap: 12px;
   }
   .logo {
-  width: 40px;
-  height: 40px;
+  width: 5rem;
+  height: 5rem;
   }
   .search_icon {
     font-size: 15px;

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/cinema-clapper-svgrepo-com.svg";
-import searchIcon from "../assets/search-svgrepo-com.svg";
+// import logo from "../assets/cinema-clapper-svgrepo-com.svg";
 import { Link } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import logo from '../assets/movie-logo-svg.svg'
 
 const API_URL = "http://www.omdbapi.com/?apikey=932ec934";
 
