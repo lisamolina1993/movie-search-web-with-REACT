@@ -8,6 +8,7 @@ import MovieDetail from "./components/MovieDetail";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 
+
 const API_URL = "http://www.omdbapi.com/?apikey=932ec934";
 
 function App() {
