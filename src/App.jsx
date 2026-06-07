@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import {HashRouter, BrowserRouter, Route, Routes } from "react-router";
+import {BrowserRouter, Route, Routes } from "react-router";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -42,7 +42,7 @@ function App() {
   }, []);
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <div className="App__container">
         <Navbar
           searchTerm={searchTerm}
@@ -70,7 +70,7 @@ function App() {
         </main>
        <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
