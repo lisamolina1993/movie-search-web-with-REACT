@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import logo from '../assets/movie-logo-svg.svg'
 
-const API_URL = "http://www.omdbapi.com/?apikey=932ec934";
+const API_URL = "https://www.omdbapi.com/?apikey=932ec934";
 
 const Navbar = ({ searchTerm, setSearchTerm, searchMovie}) => {
 
