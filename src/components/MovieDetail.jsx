@@ -37,14 +37,14 @@ const MovieDetail = () => {
           <div className="description__info">
             <h2 className="description__title">{movie.Title}</h2>
             <p className="description__para">{movie.Plot}</p>
-            <p className="description__para">Cast: {movie.Actors}</p>
-            <p className="description__para">Runtime: {movie.Runtime}</p>
             <div className="list__container">
                 <ul className="listing">
                     <li><strong>Directors: </strong>{movie.Director}</li>
+                    <li><strong>Cast: </strong>{movie.Actors}</li>
                     <li><strong>Release Date: </strong>{movie.Released}</li>
                     <li><strong>Genre: </strong>{movie.Genre}</li>
                     <li><strong>IMDB rating: </strong>{movie.imdbRating}</li>
+                    <li><strong>Runtime:: </strong>{movie.Runtime}</li>
                 </ul>
             </div>
           </div>

@@ -273,13 +273,14 @@ a {
   color: black;
   background-color: rgb(218, 211, 211);
   padding: 1.5rem;
-  max-width: 1000px;
+  max-width: 560px;
 }
 
 .detail__container {
   margin: 20px;
   display: flex;
   align-items: stretch;
+  justify-content: center;
 }
 
 .movie__img {
@@ -287,6 +288,14 @@ a {
   object-fit:contain;
   display: block;
 }
+.description__title {
+  margin-bottom: 12px;
+ }
+
+.list__container {
+  margin-top: 12px;
+  margin-bottom: 20px;
+ }
 
 /* MOVIECARD */
 
