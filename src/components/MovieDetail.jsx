@@ -11,7 +11,7 @@ const MovieDetail = () => {
   const fetchMovieDetail = async () => {
     const response = await fetch(`${API_URL}&i=${id}&plot`);
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     setMovie(data);
   };
 

@@ -5,8 +5,6 @@ import { Link } from "react-router";
 
 const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
 
-    // const placeholderIcon = '/placeholder.png'
-
 
   return (
           <figure className="movie__list" key={imdbID}>
@@ -14,7 +12,7 @@ const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
               src={Poster && Poster !== 'N/A' ? Poster : placeholderIcon}
               alt={Title}
               onError={(event) => {
-                console.log('Image failed to load for: ${Title}. Swappig with placeholder.');
+                // console.log('Image failed to load for: ${Title}. Swappig with placeholder.');
                 event.target.onError = null;
                 event.target.src = placeholderIcon;
               }}
