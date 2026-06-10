@@ -29,7 +29,7 @@ const Navbar = ({ searchTerm, setSearchTerm, searchMovie}) => {
             <li>
                 <Link className="btn__link nav__link " to='/login'> Log in</Link>
             </li>
-            <input onKeyDown={(event) => {console.log("key pressed", event.key); onSearchKeyPress(event.key)}}
+            <input onKeyDown={(event) =>  onSearchKeyPress(event.key)}
               className="search__input"
               type="text"
               id="searchInput"
@@ -52,3 +52,5 @@ const Navbar = ({ searchTerm, setSearchTerm, searchMovie}) => {
 };
 
 export default Navbar;
+
+/* {console.log("key pressed", event.key); - this line helps to see if the onkeyDown function is wokring*/ 

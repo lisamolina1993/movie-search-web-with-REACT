@@ -41,6 +41,22 @@ function App() {
     searchMovie();
   }, []);
 
+  function filterBooks(filter) {
+    console.log(filter)
+    if (filter === 'NEWEST_TO_OLDEST') {
+      setMovies(movies.slice().sort((a, b) => parseInt(b.Year) - parseInt(a.Year)))
+    }
+    if (filter === 'OLDEST_TO_NEWEST') {
+      setMovies(movies.slice().sort((a, b) => parseInt(a.Year) - parseInt(b.Year)))
+    }
+    if (filter === 'A_TO_Z') {
+      setMovies(movies.slice().sort((a, b) => a.Title.localeCompare(b.Title)))
+    }
+    if (filter === 'Z_TO_A') {
+      setMovies(movies.slice().sort((a, b) => b.Title.localeCompare(a.Title)))
+    }
+  }
+
   return (
     <BrowserRouter>
       <div className="App__container">
@@ -60,6 +76,7 @@ function App() {
                 setSearchTerm={setSearchTerm}
                 movies={movies}
                 isLoading={isLoading}
+                filterBooks={filterBooks}
               />
             }
           />

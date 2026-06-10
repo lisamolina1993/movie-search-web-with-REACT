@@ -2,16 +2,22 @@ import React from "react";
 import placeholderIcon from '../assets/placeholder.png'
 import { Link } from "react-router";
 
+
 const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
 
-  return (
-   
+    // const placeholderIcon = '/placeholder.png'
 
-        
+
+  return (
           <figure className="movie__list" key={imdbID}>
             <img
-              src={Poster !== 'N/A' ? Poster : placeholderIcon}
+              src={Poster && Poster !== 'N/A' ? Poster : placeholderIcon}
               alt={Title}
+              onError={(event) => {
+                console.log('Image failed to load for: ${Title}. Swappig with placeholder.');
+                event.target.onError = null;
+                event.target.src = placeholderIcon;
+              }}
             />
             <figcaption className="fig__caption">{Type}</figcaption>
             <figcaption className="fig__caption">{Year}</figcaption>
@@ -20,8 +26,7 @@ const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
              </figcaption>
              <Link className="description" to={`/${imdbID}`}>Movie Description</Link>
           </figure>
-        
-      
+       
 
   );
 };

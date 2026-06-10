@@ -299,6 +299,12 @@ a {
 
 /* MOVIECARD */
 
+.movies__container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
 .movies__wrapper {
   display: flex;
   flex-wrap: wrap;
