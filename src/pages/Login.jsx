@@ -5,6 +5,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const Login = () => {
   return (
     <>
+    <div className="modal-overlay">
       <form className="form__container">
         <h2 className="title__form">Login Now</h2>
         <input
@@ -36,6 +37,7 @@ const Login = () => {
           </a>
         </p>
       </form>
+      </div>
     </>
   );
 };

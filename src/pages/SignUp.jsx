@@ -3,6 +3,7 @@ import React from 'react'
 const SignUp = () => {
   return (
     <>
+    <div className='modal-overlay'>
       <form className="form__container">
         <h2 className="title__form">Sign Up Now</h2>
         <input
@@ -30,6 +31,7 @@ const SignUp = () => {
           </a>
         </p>
       </form>
+      </div>
     </>
   )
 }

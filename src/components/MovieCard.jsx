@@ -1,13 +1,14 @@
 import React from "react";
 import placeholderIcon from '../assets/placeholder.png'
 import { Link } from "react-router";
+import { motion } from "framer-motion";
 
 
 const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
 
 
   return (
-          <figure className="movie__list" key={imdbID}>
+          <motion.figure className="movie__list" key={imdbID} layout>
             <img
               src={Poster && Poster !== 'N/A' ? Poster : placeholderIcon}
               alt={Title}
@@ -23,7 +24,7 @@ const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
               {Title}
              </figcaption>
              <Link className="description" to={`/${imdbID}`}>Movie Description</Link>
-          </figure>
+          </motion.figure>
        
 
   );

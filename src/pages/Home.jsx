@@ -37,8 +37,15 @@ const Home = ({ movies, isLoading, filterBooks }) => {
             </div>
           </div>
           <div className="movies__wrapper">
-            {movies.map((movie) => (
+            {movies.map((movie, index) => (
+                <div key={movie.imdbID}
+                className="staggered-fade-item" 
+                style={{
+                    animationDelay: `${index * 0.05}s`
+                }}
+                >
               <MovieCard key={movie.imdbID} movie={movie} />
+              </div>
             ))}
           </div>
         </>
@@ -57,3 +64,4 @@ const Home = ({ movies, isLoading, filterBooks }) => {
 };
 
 export default Home;
+
